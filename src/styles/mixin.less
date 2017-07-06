@@ -1,0 +1,40 @@
+// 垂直居中
+.mixin-vertical-center() {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+// 水平居中
+.mixin-horizontal-center() {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+// 屏幕居中
+.mixin-screen-center() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+}
+
+// 线性渐变
+.mixin-linear-gradient(@origin, @start, @stop) {
+    background: @start;
+    background: -webkit-linear-gradient(@origin, @start 60%, @stop);
+    background: linear-gradient(to @origin, @start 60%, @stop);
+}
+
+// 模糊滤镜
+.mixin-blur(@blur: 10px) {	
+    // filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+    
+    -webkit-filter: blur(@blur); /* Chrome, Opera */
+       -moz-filter: blur(@blur);
+        -ms-filter: blur(@blur);    
+            filter: blur(@blur);
+    
+    // filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=@blur, MakeShadow=false); /* IE6~IE9 */
+}

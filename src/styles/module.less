@@ -1,0 +1,25 @@
+@import (reference) './mixin.less';
+
+// 跑马灯
+.marquee-line {
+    font-size: 0;
+    display: block;
+    word-break: keep-all;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+
+    > div {
+        font-size: 0.5rem;
+        display: inline-block;
+        padding-right: 1rem;
+        box-sizing: border-box;
+    }
+}
+
+// toast
+.toast {
+    padding: 0.25rem 0.5rem;
+    .mixin-screen-center();
+}
